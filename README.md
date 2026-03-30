@@ -9,7 +9,15 @@
 </p>
 
 <p align="center">
+  <a href="https://www.powershellgallery.com/packages/PsClack">PowerShell Gallery</a>
+  ·
   <a href="https://github.com/koderi-dp/psclack">GitHub</a>
+</p>
+
+<p align="center">
+  <a href="https://www.powershellgallery.com/packages/PsClack"><img src="https://img.shields.io/powershellgallery/v/PsClack?label=PowerShell%20Gallery" alt="PowerShell Gallery Version" /></a>
+  <a href="https://www.powershellgallery.com/packages/PsClack"><img src="https://img.shields.io/powershellgallery/dt/PsClack?label=Downloads" alt="PowerShell Gallery Downloads" /></a>
+  <a href="https://github.com/koderi-dp/psclack/blob/main/LICENSE"><img src="https://img.shields.io/github/license/koderi-dp/psclack" alt="License" /></a>
 </p>
 
 <p align="center">
@@ -48,10 +56,16 @@ Private internals are grouped into:
 
 `PsClack.psm1` is the module entry point and exports an explicit function list from those grouped source files.
 
+## Install
+
+```powershell
+Install-Module PsClack -Scope CurrentUser
+```
+
 ## Quick Start
 
 ```powershell
-Import-Module .\PsClack.psd1 -Force
+Import-Module PsClack -Force
 
 Show-PsClackIntro -Message 'create-my-app'
 
@@ -76,6 +90,14 @@ Invoke-PsClackWithSpinner -Message 'Installing via npm' -SuccessMessage 'Install
 }
 
 Show-PsClackOutro -Message "You're all set!"
+```
+
+## Development
+
+When working from a local clone of the repository, import the manifest from the project root:
+
+```powershell
+Import-Module .\PsClack.psd1 -Force
 ```
 
 ## Components
