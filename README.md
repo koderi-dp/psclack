@@ -18,7 +18,7 @@
 
 `PsClack` provides interactive prompts, spinners, notes, and boxed output with ANSI and plain fallbacks.
 
-Public commands use the `PsClack` noun prefix to avoid collisions with other modules. Legacy unprefixed names are kept as compatibility aliases inside the module, but the prefixed commands are the supported surface for new usage.
+Public commands use the `PsClack` noun prefix to avoid collisions with other modules.
 
 ## Layout
 
