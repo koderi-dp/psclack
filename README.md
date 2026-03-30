@@ -102,6 +102,10 @@ Use `Read-*Prompt` directly for interactive input. Use `Invoke-PsClackWithSpinne
 
 Use `Read-PsClackAutocompletePrompt` and `Read-PsClackAutocompleteMultiSelectPrompt` when the option set is easier to filter than to scan. Use `Read-PsClackPathPrompt` for local path entry with live filesystem suggestions, and `Read-PsClackFileSearchPrompt` when you want to pre-index a directory tree and then fuzzy-filter relative paths.
 
+Live-rendered components such as spinners, progress bars, task logs, and prompt frames assume a mostly stable terminal layout while they are running. Resizing the terminal mid-render, mixing in unrelated writes to the same console line, or writing directly to the host from parallel/background work can break cursor placement, wrapping, or the visible frame state.
+
+For the most reliable output, avoid resizing the terminal during active progress or spinner rendering, and prefer updating the UI through the provided PsClack APIs instead of direct `Write-Host` or other live line mutations while a component owns the frame.
+
 ## API Reference
 
 ### Read-PsClackTextPrompt
@@ -506,34 +510,6 @@ Useful scripts:
 - `Examples\wrapped-prompts.ps1`
 - `Examples\wrapped-spinner.ps1`
 - `Examples\error-state.ps1`
-
-## Demo GIFs
-
-This repo includes a local `terminalizer` config for recording PowerShell demos.
-
-Create a recording:
-
-```powershell
-terminalizer record Recordings\spinner -c .\terminalizer.yml -d "pwsh .\Examples\spinner.ps1"
-```
-
-Replay it:
-
-```powershell
-terminalizer play Recordings\spinner
-```
-
-Render the GIF:
-
-```powershell
-terminalizer render Recordings\spinner -o Recordings\spinner.gif
-```
-
-Recommended examples:
-- `Examples\spinner.ps1`
-- `Examples\note.ps1`
-- `Examples\box.ps1`
-- `Examples\tasks.ps1`
 
 ## Testing
 
