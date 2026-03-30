@@ -1,8 +1,20 @@
-# PsClack
+<p align="center">
+  <img src="./icon.svg" alt="PsClack logo" width="140" />
+</p>
 
-![PsClack tasks demo](./tasks.gif)
+<h1 align="center">PsClack</h1>
 
-Clack-inspired terminal prompts and UI components for PowerShell 7+.
+<p align="center">
+  Clack-inspired terminal prompts and UI components for PowerShell 7+.
+</p>
+
+<p align="center">
+  <a href="https://github.com/koderi-dp/psclack">GitHub</a>
+</p>
+
+<p align="center">
+  <img src="./tasks.gif" alt="PsClack tasks demo" />
+</p>
 
 `PsClack` provides interactive prompts, spinners, notes, and boxed output with ANSI and plain fallbacks.
 
