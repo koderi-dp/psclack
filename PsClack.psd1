@@ -1,6 +1,6 @@
 @{
     RootModule = 'PsClack.psm1'
-    ModuleVersion = '0.1.0'
+    ModuleVersion = '0.1.1'
     GUID = '2cf46836-8cf1-4860-960e-2e0a275d4fd1'
     Author = 'koderi-dp'
     CompanyName = 'koderi'
